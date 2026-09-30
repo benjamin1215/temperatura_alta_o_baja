@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>¿Hace calor o frío?</h1>
+    <input type="number" id="temperatura" placeholder="Escribe la temperetura">
+    <button onclick="probar()" id="probar">¡Veamos!</button>
+    <h2 id="salida">¿Qué será?</h2>
+    <script>
+        function probar() {
+            let a = Number(document.getElementById("temperatura").value);
+
+        //Mayor a 30 grados
+        if (a > 30) {
+            document.getElementById("salida").innerHTML = "¡Hace calor!";
+        }
+        //Menor a 10 grados
+        else if (a < 10) {
+            document.getElementById("salida").innerHTML = "¡Hace frío!";
+        }
+        //Entre 10 y 30 grados
+        else {
+            document.getElementById("salida").innerHTML = "¡Está agradable!";
+        }
+    }
+    </script>
+</body>
+</html>
